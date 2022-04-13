@@ -1,14 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/style.css">
-    <script src="./scripts/script.js" defer></script>
-    <title>Library</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined"
+      rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/reset.css">
+  <link rel="stylesheet" href="./styles/style.css">
+  <script src="./scripts/script.js" defer></script>
+  <title>Library</title>
 </head>
+
 <body>
-    
+  <main>
+    <div class="library">
+      <div class="pop-up">
+        <div class="form-container">
+          <form id="add-book">
+            <h2>Add a book</h2>
+            <ul class="form-inner">
+              <button type="button" class="pop-up-close-button material-icons">close</button>
+              <li class="form-entry">
+                <label for="title">Book title:</label>
+                <input type="text" name="title" id="title" required>
+              </li>
+              <li class="form-entry">
+                <label for="author">Author:</label>
+                <input type="text" name="author" id="author" required>
+              </li>
+              <li class="form-entry">
+                <label for="pages">Pages:</label>
+                <input type="number" name="pages" id="pages" required>
+              </li>
+              <li class="form-entry">
+                <label for="language">Language:</label>
+                <input type="text" name="language" id="language" required>
+              </li>
+              <li class="form-entry">
+                <label for="isbn">ISBN-13:</label>
+                <input type="text" name="isbn" id="isbn" required>
+              </li>
+              <li class="form-entry">
+                <label for="read">Have you read it? (Check if yes)
+                  <input type="checkbox" name="read" id="read">
+                  <span class="checkmark"></span>
+                </label>
+              </li>
+              <li class="form-entry">
+                <button type="submit" form="add-book" id="submit-button">Add book</button>
+              </li>
+            </ul>
+          </form>
+        </div>
+      </div>
+      <div class="add-card material-icons">add</div>
+    </div>
+  </main>
 </body>
+
 </html>

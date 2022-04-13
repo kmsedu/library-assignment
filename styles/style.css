@@ -1,0 +1,256 @@
+html {
+  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  background: #e0e0e0;
+}
+
+main {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.book, .add-card {
+  box-shadow: 0 2px 3px #ccc;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.not-been-read {
+  color: #66bb6a;
+}
+
+.been-read {
+  color: #c4001d;
+}
+
+.library {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem 1rem;
+}
+
+.pop-up {
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.712);
+  height: 100%;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+}
+
+.form-container {
+  background: white;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 15px;
+}
+
+.form-container h2 {
+  display: inline-block;
+  position: relative;
+  top: 30px;
+  left: 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.form-inner {
+  display: grid;
+  margin-top: 15px;
+}
+
+.pop-up-close-button {
+  justify-self: end;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  bottom: 15px;
+  right: 15px;
+  color: rgba(22, 22, 22, 0.808);
+}
+
+.pop-up-close-button:hover {
+  color: #c4001d;
+}
+
+.form-entry {
+  display: flex;
+  align-items: center;
+  padding: 1rem 3rem;
+}
+
+.form-entry label {
+  flex: 1;
+  padding-right: 1rem;
+}
+
+.form-entry input {
+  font-size: 1rem;
+  padding: 0.4rem 1rem;
+  border-radius: 15px;
+  border: 2px solid transparent;
+  background: rgb(228, 228, 228);
+}
+
+.form-entry input:focus {
+  outline: none;
+  border: 2px solid rgb(218, 218, 218);
+}
+
+.form-entry label > input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+label[for="read"] {
+  position: relative;
+}
+
+.checkmark {
+  position: absolute;
+  background: #ccc;
+  width: 25px;
+  height: 25px;
+  top: -5px;
+  right: 3rem;
+}
+
+label[for="read"] input:hover ~ .checkmark {
+  filter: brightness(90%);
+}
+
+label[for="read"] input:checked ~ .checkmark {
+  background: #c4001d;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+label[for="read"] input:checked ~ .checkmark:after {
+  display: block;
+}
+
+label[for="read"] .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#submit-button {
+  background: #c4001d;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  color: white;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+#submit-button:hover {
+  filter: brightness(90%);
+}
+
+.book {
+  height: 350px;
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  display: grid;
+  grid-template-rows: 3fr 2fr repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.book > h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.3;
+  align-self: center;
+  margin-bottom: 1rem;
+}
+
+.book-author {
+  margin-bottom: 6px;
+  font-size: 1.1rem;
+  color: rgba(22, 22, 22, 0.815);
+  font-weight: 600;
+}
+
+.pages-number, .language-display, .isbn-number {
+  color: rgba(22, 22, 22, 0.637);
+  font-weight: 600;
+}
+
+.tool-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tool-section button {
+  background: none;
+  border: none;
+  font-size: 24px;
+}
+
+.tool-section :last-child {
+  color:rgb(66, 66, 66);
+}
+
+.tool-section button:hover {
+  filter: brightness(110%);
+  cursor: pointer;
+}
+
+.add-card {
+  border-radius: 15px;
+  background: white;
+  display: flex;
+  place-content: center;
+  place-items: center;
+  height: 350px;
+  font-size: 48px;
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE10+/Edge */
+  user-select: none;
+  /* Standard */
+}
+
+.add-card:hover {
+  background-color: rgba(255, 255, 255, 0.836);
+  cursor: pointer;
+  color: #c4001d;
+}
