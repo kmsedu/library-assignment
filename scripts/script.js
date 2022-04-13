@@ -19,7 +19,6 @@ function Card(book) {
 }
 
 Card.prototype.getDiv = function() {
-
   const cardWrapper = document.createElement('div');
   const cardTitle = document.createElement('h2');
   const cardAuthor = document.createElement('p');
@@ -134,7 +133,6 @@ function showPopUpWindow() {
 
   addCard.addEventListener('click', showPopUpWindow);
 
-  const testBook = new Book(`Harry Potter and the Philosopher's stone`, `J.K. Rowling`, 223, true, 'English', '0-7475-3269-9');
+  const testBook = new Book(`Harry Potter and the Philosopher's Stone`, `J.K. Rowling`, 223, true, 'English', '0-7475-3269-9');
   const testCard = new Card(testBook);
-
   testCard.displayInWindow();
